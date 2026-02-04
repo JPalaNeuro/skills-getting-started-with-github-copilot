@@ -86,19 +86,53 @@ section h3 {
   color: #333;
 }
 
+/* Hide default bullet points and align items */
 .participants-list {
-  list-style: disc;
-  margin-left: 20px;
-  padding-left: 6px;
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
 }
 
 .participants-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: 6px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.03);
   color: #444;
   font-size: 14px;
 }
 
+.participant-email {
+  word-break: break-all;
+}
+
+.remove-participant {
+  background: none;
+  border: none;
+  color: #c62828;
+  font-size: 16px;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 50%;
+  transition: background 0.15s ease, transform 0.08s ease;
+  line-height: 1;
+}
+
+.remove-participant:hover {
+  background: rgba(198, 40, 40, 0.08);
+  transform: scale(1.05);
+}
+
+.remove-participant:focus {
+  outline: 2px solid rgba(198, 40, 40, 0.15);
+  outline-offset: 2px;
+}
 .no-participants {
   color: #666;
   font-style: italic;
